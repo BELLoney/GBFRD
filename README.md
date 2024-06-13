@@ -26,14 +26,13 @@ If you find GBFRD useful in your research, please consider citing:
 ```
 @article{SU2024121016,
 title = {Detecting anomalies with granular-ball fuzzy rough sets},
+author = {Xinyu Su and Zhong Yuan and Baiyang Chen and Dezhong Peng and Hongmei Chen and Yingke Chen},
 journal = {Information Sciences},
+volume={646},
 pages = {121016},
 year = {2024},
-issn = {0020-0255},
 doi = {https://doi.org/10.1016/j.ins.2024.121016},
-url = {https://www.sciencedirect.com/science/article/pii/S0020025524009307},
-author = {Xinyu Su and Zhong Yuan and Baiyang Chen and Dezhong Peng and Hongmei Chen and Yingke Chen},
-keywords = {Granular computing, Fuzzy rough sets, Granular-ball, Anomaly detection, Outlier detection}
+publisher={Elsevier}
 }
 ```
 ## Contact
