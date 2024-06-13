@@ -11,14 +11,11 @@ Most of the existing anomaly detection methods are based on a single and fine gr
 You can run GBFRD.py:
 ```python
 if __name__ == '__main__':
-    load_data = loadmat('./Example.mat')
-    trandata = load_data['trandata']
-    ID = (trandata >= 1).all(axis=0) & (trandata.max(axis=0) != trandata.min(axis=0))
+    data = pd.read_csv("./Example.csv").values
+    ID = (data >= 1).all(axis=0) & (data.max(axis=0) != data.min(axis=0))
     scaler = MinMaxScaler()
     if any(ID):
-        trandata[:, ID] = scaler.fit_transform(trandata[:, ID])
-    data = trandata[:,:-1]
-    label = trandata[:,-1]
+        data[:, ID] = scaler.fit_transform(data[:, ID])
     sigma = 0.6
     out_factors = GBFRD(data, sigma)
     print(out_factors)
