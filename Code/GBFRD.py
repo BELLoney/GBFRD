@@ -94,11 +94,14 @@ def GBFRD(data, sigma=0):
 
 
 if __name__ == '__main__':
-    load_data = loadmat('./Datasets/arrhythmia_variant1.mat')
+    load_data = loadmat('./Example.mat')
     trandata = load_data['trandata']
+    ID = (trandata >= 1).all(axis=0) & (trandata.max(axis=0) != trandata.min(axis=0))
+    scaler = MinMaxScaler()
+    if any(ID):
+        trandata[:, ID] = scaler.fit_transform(trandata[:, ID])
     data = trandata[:,:-1]
     label = trandata[:,-1]
-    scaler = MinMaxScaler()
-    X = scaler.fit_transform(data)
     sigma = 0.0
-    out_factor = GBFRD(X, sigma)
+    out_factor = GBFRD(data, sigma)
+    print(out_factor)
