@@ -9,7 +9,7 @@ Most of the existing anomaly detection methods are based on a single and fine gr
 
 ## Usage
 You can run GBFRD.py:
-```
+```python
 if __name__ == '__main__':
     load_data = loadmat('./Example.mat')
     trandata = load_data['trandata']
