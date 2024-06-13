@@ -37,4 +37,4 @@ keywords = {Granular computing, Fuzzy rough sets, Granular-ball, Anomaly detecti
 }
 ```
 ## Contact
-If you have any questions, please contact suxinyu@stu.scu.edu.cn.
+If you have any questions, please contact suxinyu@stu.scu.edu.cn or yuanzhong@scu.edu.cn.
