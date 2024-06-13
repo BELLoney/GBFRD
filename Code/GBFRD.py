@@ -102,6 +102,6 @@ if __name__ == '__main__':
         trandata[:, ID] = scaler.fit_transform(trandata[:, ID])
     data = trandata[:,:-1]
     label = trandata[:,-1]
-    sigma = 0.0
-    out_factor = GBFRD(data, sigma)
-    print(out_factor)
+    sigma = 0.6
+    out_factors = GBFRD(data, sigma)
+    print(out_factors)
