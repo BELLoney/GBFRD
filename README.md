@@ -11,16 +11,25 @@ Most of the existing anomaly detection methods are based on a single and fine gr
 You can run GBFRD.py:
 ```
 if __name__ == '__main__':
-    load_data = loadmat('./Datasets/arrhythmia_variant1.mat')
+    load_data = loadmat('./Example.mat')
     trandata = load_data['trandata']
+    ID = (trandata >= 1).all(axis=0) & (trandata.max(axis=0) != trandata.min(axis=0))
+    scaler = MinMaxScaler()
+    if any(ID):
+        trandata[:, ID] = scaler.fit_transform(trandata[:, ID])
     data = trandata[:,:-1]
     label = trandata[:,-1]
-    scaler = MinMaxScaler()
-    X = scaler.fit_transform(data)
-    sigma = 0.0
-    out_factor = GBFRD(X, sigma)
+    sigma = 0.6
+    out_factors = GBFRD(data, sigma)
+    print(out_factors)
 ```
-
+You can get outputs as follows:
+```
+out_factors = [0.20595384 0.30457415 0.1775164  0.37436982 0.22177716 0.22989089
+ 0.30296993 0.26581625 0.27651796 0.2649136  0.31455997 0.26370036
+ 0.27206448 0.25388759 0.26026712 0.2736494  0.27872721 0.25322572
+ 0.31623681 0.24653541]
+```
 ## Citation
 If you find GBFRD useful in your research, please consider citing:
 ```
