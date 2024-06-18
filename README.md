@@ -30,7 +30,7 @@ out_factors = [0.20595384 0.30457415 0.1775164  0.37436982 0.22177716 0.22989089
 ## Citation
 If you find GBFRD useful in your research, please consider citing:
 ```
-@article{SU2024121016,
+@article{Su2024Detecting,
 title = {Detecting anomalies with granular-ball fuzzy rough sets},
 author = {Xinyu Su and Zhong Yuan and Baiyang Chen and Dezhong Peng and Hongmei Chen and Yingke Chen},
 journal = {Information Sciences},
