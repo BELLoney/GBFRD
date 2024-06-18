@@ -34,7 +34,7 @@ If you find GBFRD useful in your research, please consider citing:
 title = {Detecting anomalies with granular-ball fuzzy rough sets},
 author = {Xinyu Su and Zhong Yuan and Baiyang Chen and Dezhong Peng and Hongmei Chen and Yingke Chen},
 journal = {Information Sciences},
-volume={646},
+volume={678},
 pages = {121016},
 year = {2024},
 doi = {https://doi.org/10.1016/j.ins.2024.121016},
